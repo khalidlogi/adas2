@@ -1,0 +1,28 @@
+2023-10-31T12:38:05+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, array must have exactly two members in C:\laragon\www\wp-includes\class-wp-hook.php:312
+Stack trace:
+#0 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('http://localhos...', Array)
+#1 C:\laragon\www\wp-login.php(1277): apply_filters('login_redirect', 'http://localhos...', 'http://localhos...', Object(WP_Error))
+#2 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 312
+
+2023-10-31T12:56:12+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, array must have exactly two members in C:\laragon\www\wp-includes\class-wp-hook.php:312
+Stack trace:
+#0 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('http://localhos...', Array)
+#1 C:\laragon\www\wp-login.php(1277): apply_filters('login_redirect', 'http://localhos...', 'http://localhos...', Object(WP_Error))
+#2 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 312
+
+2023-10-31T13:02:11+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, array must have exactly two members in C:\laragon\www\wp-includes\class-wp-hook.php:312
+Stack trace:
+#0 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('http://localhos...', Array)
+#1 C:\laragon\www\wp-login.php(1277): apply_filters('login_redirect', 'http://localhos...', '', Object(WP_Error))
+#2 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 312
+
+2023-10-31T13:17:39+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class KHMYCLASS does not have a method "custom_login_redirect()" in C:\laragon\www\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('http://localhos...', Array)
+#1 C:\laragon\www\wp-login.php(1277): apply_filters('login_redirect', 'http://localhos...', '', Object(WP_Error))
+#2 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 310
+

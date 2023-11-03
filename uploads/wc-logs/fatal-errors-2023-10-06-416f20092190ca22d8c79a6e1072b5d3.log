@@ -1,0 +1,236 @@
+2023-10-06T23:11:06+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(293): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(294): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+
+2023-10-06T23:11:46+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(293): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(294): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+
+2023-10-06T23:11:56+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(293): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(294): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+
+2023-10-06T23:23:56+00:00 CRITICAL Uncaught Error: Call to undefined method KHSettings::wpforms_notice_front() in C:\laragon\www\wp-content\plugins\kh-wpform\main.php:320
+Stack trace:
+#0 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#3 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#4 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#5 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#6 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#7 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#8 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#9 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#10 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#11 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#12 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#13 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#14 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#15 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\main.php on line 320
+
+2023-10-06T23:24:31+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(295): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(320): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+
+2023-10-06T23:24:40+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(295): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(320): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+
+2023-10-06T23:26:52+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(295): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(292): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+
+2023-10-06T23:28:08+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(295): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(292): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+
+2023-10-06T23:28:16+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(295): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(292): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+
+2023-10-06T23:38:13+00:00 CRITICAL Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\wp-includes\capabilities.php:805
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-user.php(777): map_meta_cap(Array, 1)
+#1 C:\laragon\www\wp-includes\capabilities.php(985): WP_User->has_cap(Array)
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHSettings.php(295): user_can(Object(WP_User), Array)
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(292): KHSettings->user_roles()
+#4 C:\laragon\www\wp-includes\shortcodes.php(395): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\laragon\www\wp-includes\shortcodes.php(235): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="8...')
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="8...')
+#8 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="8...', Array)
+#9 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#10 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#11 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#12 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#13 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#14 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#15 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#16 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#17 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\wp-includes\capabilities.php on line 805
+

@@ -1,0 +1,48 @@
+2023-10-17T20:17:09+00:00 CRITICAL Uncaught TypeError: unserialize(): Argument #1 ($data) must be of type string, array given in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:116
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php(116): unserialize(Array)
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#2 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#3 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#5 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 116
+
+2023-10-17T20:19:22+00:00 CRITICAL Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:132
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php(132): htmlspecialchars(Array)
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#2 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#3 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#5 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 132
+
+2023-10-17T20:20:02+00:00 CRITICAL Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:132
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php(132): htmlspecialchars(Array)
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#2 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#3 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#5 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 132
+
+2023-10-17T20:24:41+00:00 CRITICAL Uncaught Error: Call to a member function get_cellmap() on null in C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameReflower\TableCell.php:40
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\TableCell->reflow(NULL)
+#1 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameReflower\TableRow.php(56): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#2 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\TableRow->reflow(Object(Dompdf\FrameDecorator\Block))
+#3 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#4 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(NULL)
+#5 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameReflower\Page.php(142): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#6 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Page->reflow(NULL)
+#7 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\Dompdf.php(765): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#8 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php(153): Dompdf\Dompdf->render()
+#9 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#10 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#11 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#12 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#13 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\FrameReflower\TableCell.php on line 40
+

@@ -1,0 +1,52 @@
+2023-10-25T20:38:10+00:00 CRITICAL Uncaught TypeError: urlencode(): Argument #1 ($string) must be of type string, array given in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHTelegram.php:38
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHTelegram.php(38): urlencode(Array)
+#1 C:\laragon\www\wp-content\plugins\kh-wpforms-db\main.php(497): KHTelegram->sendNotification()
+#2 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHMYCLASS->process_entry(Array, Array, '80', Array)
+#3 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#4 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1445): do_action('wpforms_process...', Array, Array, '80', Array)
+#6 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(535): WPForms_Process->entry_save(Array, Array, '80', Array)
+#7 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(137): WPForms_Process->process(Array)
+#8 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1531): WPForms_Process->listen()
+#9 C:\laragon\www\wp-includes\class-wp-hook.php(310): WPForms_Process->ajax_submit('')
+#10 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#11 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#12 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_wpforms...')
+#13 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHTelegram.php on line 38
+
+2023-10-25T20:38:36+00:00 CRITICAL Uncaught TypeError: urlencode(): Argument #1 ($string) must be of type string, array given in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHTelegram.php:38
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHTelegram.php(38): urlencode(Array)
+#1 C:\laragon\www\wp-content\plugins\kh-wpforms-db\main.php(497): KHTelegram->sendNotification()
+#2 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHMYCLASS->process_entry(Array, Array, '80', Array)
+#3 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#4 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1445): do_action('wpforms_process...', Array, Array, '80', Array)
+#6 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(535): WPForms_Process->entry_save(Array, Array, '80', Array)
+#7 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(137): WPForms_Process->process(Array)
+#8 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1531): WPForms_Process->listen()
+#9 C:\laragon\www\wp-includes\class-wp-hook.php(310): WPForms_Process->ajax_submit('')
+#10 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#11 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#12 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_wpforms...')
+#13 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHTelegram.php on line 38
+
+2023-10-25T21:46:47+00:00 CRITICAL Uncaught Error: Call to a member function get() on null in C:\laragon\www\wp-content\plugins\kh-wpforms-db\main.php:462
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHMYCLASS->process_entry(Array, Array, '80', Array)
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1445): do_action('wpforms_process...', Array, Array, '80', Array)
+#4 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(535): WPForms_Process->entry_save(Array, Array, '80', Array)
+#5 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(137): WPForms_Process->process(Array)
+#6 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1531): WPForms_Process->listen()
+#7 C:\laragon\www\wp-includes\class-wp-hook.php(310): WPForms_Process->ajax_submit('')
+#8 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#9 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#10 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_wpforms...')
+#11 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpforms-db\main.php on line 462
+

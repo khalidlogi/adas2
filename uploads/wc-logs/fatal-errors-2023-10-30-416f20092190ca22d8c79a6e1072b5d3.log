@@ -1,0 +1,9 @@
+2023-10-30T13:47:53+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class KHMYCLASS does not have a method "admin_css" in C:\laragon\www\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\wp-admin\admin-header.php(118): do_action('admin_enqueue_s...', 'settings_page_k...')
+#3 C:\laragon\www\wp-admin\admin.php(239): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 310
+

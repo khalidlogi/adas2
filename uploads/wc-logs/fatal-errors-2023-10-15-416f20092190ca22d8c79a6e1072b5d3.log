@@ -1,0 +1,22 @@
+2023-10-15T17:22:24+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\laragon\www\wp-content\plugins\kh-wpform\vendor\mpdf\mpdf\src\Mpdf.php on line 2238
+
+2023-10-15T17:27:35+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\laragon\www\wp-content\plugins\kh-wpform\vendor\mpdf\mpdf\src\Mpdf.php on line 2238
+
+2023-10-15T20:42:11+00:00 CRITICAL Uncaught Error: Undefined constant "form_values" in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:53
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#4 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 53
+
+2023-10-15T21:24:01+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:74
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#4 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 74
+

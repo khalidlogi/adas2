@@ -1,0 +1,45 @@
+2023-10-14T15:36:40+00:00 CRITICAL Uncaught Error: Call to a member function getDate() on null in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:34
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#4 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 34
+
+2023-10-14T15:37:52+00:00 CRITICAL Uncaught Error: Call to undefined method KHdb::retrieveFormValues() in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:36
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#4 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 36
+
+2023-10-14T15:38:02+00:00 CRITICAL Uncaught Error: Call to undefined method KHdb::retrieveFormValues() in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:36
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#4 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 36
+
+2023-10-14T15:40:35+00:00 CRITICAL Uncaught Error: Call to undefined method KHdb::retrieveFormValues() in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:36
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#4 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 36
+
+2023-10-14T15:40:50+00:00 CRITICAL Uncaught Error: Call to undefined method KHdb::retrieveFormValues() in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:36
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#4 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 36
+

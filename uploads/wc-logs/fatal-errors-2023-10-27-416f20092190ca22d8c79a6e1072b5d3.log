@@ -1,0 +1,68 @@
+2023-10-27T21:03:38+00:00 CRITICAL Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php:562
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(562): in_array('62', '1')
+#1 C:\laragon\www\wp-admin\includes\template.php(1824): KHSettings->multiselect1_html(Array)
+#2 C:\laragon\www\wp-admin\includes\template.php(1778): do_settings_fields('khwpformsdb', 'cliowp_settings...')
+#3 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(637): do_settings_sections('khwpformsdb')
+#4 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHSettings->settings_page_html('')
+#5 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#6 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\wp-admin\admin.php(259): do_action('settings_page_k...')
+#8 C:\laragon\www\wp-admin\options-general.php(10): require_once('C:\\laragon\\www\\...')
+#9 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php on line 562
+
+2023-10-27T21:12:30+00:00 CRITICAL Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php:566
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(566): in_array('62', '1')
+#1 C:\laragon\www\wp-admin\includes\template.php(1824): KHSettings->multiselect1_html(Array)
+#2 C:\laragon\www\wp-admin\includes\template.php(1778): do_settings_fields('khwpformsdb', 'cliowp_settings...')
+#3 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(641): do_settings_sections('khwpformsdb')
+#4 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHSettings->settings_page_html('')
+#5 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#6 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\wp-admin\admin.php(259): do_action('settings_page_k...')
+#8 C:\laragon\www\wp-admin\options-general.php(10): require_once('C:\\laragon\\www\\...')
+#9 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php on line 566
+
+2023-10-27T21:13:21+00:00 CRITICAL Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php:567
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(567): in_array('62', '1')
+#1 C:\laragon\www\wp-admin\includes\template.php(1824): KHSettings->multiselect1_html(Array)
+#2 C:\laragon\www\wp-admin\includes\template.php(1778): do_settings_fields('khwpformsdb', 'cliowp_settings...')
+#3 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(642): do_settings_sections('khwpformsdb')
+#4 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHSettings->settings_page_html('')
+#5 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#6 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\wp-admin\admin.php(259): do_action('settings_page_k...')
+#8 C:\laragon\www\wp-admin\options-general.php(10): require_once('C:\\laragon\\www\\...')
+#9 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php on line 567
+
+2023-10-27T21:13:51+00:00 CRITICAL Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php:567
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(567): in_array('62', '1')
+#1 C:\laragon\www\wp-admin\includes\template.php(1824): KHSettings->multiselect1_html(Array)
+#2 C:\laragon\www\wp-admin\includes\template.php(1778): do_settings_fields('khwpformsdb', 'cliowp_settings...')
+#3 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(642): do_settings_sections('khwpformsdb')
+#4 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHSettings->settings_page_html('')
+#5 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#6 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\wp-admin\admin.php(259): do_action('settings_page_k...')
+#8 C:\laragon\www\wp-admin\options-general.php(10): require_once('C:\\laragon\\www\\...')
+#9 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php on line 567
+
+2023-10-27T23:51:44+00:00 CRITICAL Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class KHSettings does not have a method "checkbox1_html" in C:\laragon\www\wp-admin\includes\template.php:1824
+Stack trace:
+#0 C:\laragon\www\wp-admin\includes\template.php(1778): do_settings_fields('khwpformsdb', 'cliowp_settings...')
+#1 C:\laragon\www\wp-content\plugins\kh-wpforms-db\Inc\KHSettings.php(700): do_settings_sections('khwpformsdb')
+#2 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHSettings->settings_page_html('')
+#3 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#4 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\laragon\www\wp-admin\admin.php(259): do_action('settings_page_k...')
+#6 C:\laragon\www\wp-admin\options-general.php(10): require_once('C:\\laragon\\www\\...')
+#7 {main}
+  thrown in C:\laragon\www\wp-admin\includes\template.php on line 1824
+

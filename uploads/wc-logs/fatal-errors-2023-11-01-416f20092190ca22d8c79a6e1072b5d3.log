@@ -1,0 +1,48 @@
+2023-11-01T17:41:51+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class KHMYCLASS does not have a method "enqueue_font_awesome" in C:\laragon\www\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\wp-admin\admin-header.php(118): do_action('admin_enqueue_s...', 'settings_page_k...')
+#3 C:\laragon\www\wp-admin\admin.php(239): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 310
+
+2023-11-01T19:36:33+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class KHMYCLASS does not have a method "redirect_action" in C:\laragon\www\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#1 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\wp-content\plugins\wpforms-lite\src\Frontend\Frontend.php(602): do_action('wpforms_fronten...', Array, Array, Array, 0)
+#3 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1547): WPForms\Frontend\Frontend->confirmation(Array)
+#4 C:\laragon\www\wp-includes\class-wp-hook.php(310): WPForms_Process->ajax_submit('')
+#5 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#6 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_wpforms...')
+#8 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 310
+
+2023-11-01T19:37:16+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class KHMYCLASS does not have a method "redirect_action" in C:\laragon\www\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#1 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\wp-content\plugins\wpforms-lite\src\Frontend\Frontend.php(602): do_action('wpforms_fronten...', Array, Array, Array, 0)
+#3 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1547): WPForms\Frontend\Frontend->confirmation(Array)
+#4 C:\laragon\www\wp-includes\class-wp-hook.php(310): WPForms_Process->ajax_submit('')
+#5 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#6 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_wpforms...')
+#8 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 310
+
+2023-11-01T19:37:48+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class KHMYCLASS does not have a method "redirect_action" in C:\laragon\www\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#1 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\wp-content\plugins\wpforms-lite\src\Frontend\Frontend.php(602): do_action('wpforms_fronten...', Array, Array, Array, 0)
+#3 C:\laragon\www\wp-content\plugins\wpforms-lite\includes\class-process.php(1547): WPForms\Frontend\Frontend->confirmation(Array)
+#4 C:\laragon\www\wp-includes\class-wp-hook.php(310): WPForms_Process->ajax_submit('')
+#5 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#6 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_wpforms...')
+#8 {main}
+  thrown in C:\laragon\www\wp-includes\class-wp-hook.php on line 310
+

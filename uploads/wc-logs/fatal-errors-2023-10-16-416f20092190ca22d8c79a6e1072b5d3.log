@@ -1,0 +1,41 @@
+2023-10-16T20:04:18+00:00 CRITICAL Uncaught Error: Class "Dompdf" not found in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php:99
+Stack trace:
+#0 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#1 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#4 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php on line 99
+
+2023-10-16T20:20:48+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\Adapter\CPDF.php:928
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\Dompdf.php(890): Dompdf\Adapter\CPDF->output('data.pdf')
+#1 C:\laragon\www\wp-content\plugins\kh-wpform\Inc\KHPDF.php(93): Dompdf\Dompdf->output('data.pdf', 'D')
+#2 C:\laragon\www\wp-includes\class-wp-hook.php(310): KHPDF->export_form_data_pdf('')
+#3 C:\laragon\www\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#4 C:\laragon\www\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\laragon\www\wp-admin\admin-ajax.php(188): do_action('wp_ajax_export_...')
+#6 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\vendor\dompdf\dompdf\src\Adapter\CPDF.php on line 928
+
+2023-10-16T20:47:37+00:00 CRITICAL Uncaught TypeError: unserialize(): Argument #1 ($data) must be of type string, array given in C:\laragon\www\wp-content\plugins\kh-wpform\main.php:433
+Stack trace:
+#0 C:\laragon\www\wp-content\plugins\kh-wpform\main.php(433): unserialize(Array)
+#1 C:\laragon\www\wp-includes\shortcodes.php(433): KHMYCLASS->display_form_values_shortcode('', '', 'display_form_va...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\laragon\www\wp-includes\shortcodes.php(273): preg_replace_callback('/\\[(\\[?)(displa...', 'do_shortcode_ta...', '\n[wpforms id="6...')
+#4 C:\laragon\www\wp-includes\class-wp-hook.php(310): do_shortcode('\n[wpforms id="6...')
+#5 C:\laragon\www\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n[wpforms id="6...', Array)
+#6 C:\laragon\www\wp-includes\blocks\post-content.php(54): apply_filters('the_content', '<!-- wp:paragra...')
+#7 C:\laragon\www\wp-includes\class-wp-block.php(258): render_block_core_post_content(Array, '<!-- wp:paragra...', Object(WP_Block))
+#8 C:\laragon\www\wp-includes\class-wp-block.php(244): WP_Block->render()
+#9 C:\laragon\www\wp-includes\blocks.php(1133): WP_Block->render()
+#10 C:\laragon\www\wp-includes\blocks.php(1171): render_block(Array)
+#11 C:\laragon\www\wp-includes\block-template.php(231): do_blocks('<!-- wp:templat...')
+#12 C:\laragon\www\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#13 C:\laragon\www\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#14 C:\laragon\www\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#15 C:\laragon\www\index.php(17): require('C:\\laragon\\www\\...')
+#16 {main}
+  thrown in C:\laragon\www\wp-content\plugins\kh-wpform\main.php on line 433
+

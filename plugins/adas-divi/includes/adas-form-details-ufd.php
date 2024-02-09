@@ -1,0 +1,177 @@
+<?php
+
+if (!defined('ABSPATH'))
+    exit;
+
+/**
+ *
+ */
+class ADAS_Form_Details_Ufd
+{
+    private $form_id;
+    private $form_post_id;
+    protected $table_name;
+
+
+    public function __construct()
+    {
+
+        global $wpdb;
+        $this->form_post_id = $_GET['fid'];
+        $this->form_id = (int) $_GET['ufid'];
+        $this->table_name = $wpdb->prefix . 'divi_table';
+
+        $this->form_details_page();
+    }
+
+    public function retrieve_form_values($formid = '')
+    {
+
+        global $wpdb;
+        $formid = $formid;
+        $results = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT * FROM {$this->table_name}  WHERE contact_form_id = %s AND id = %d ORDER BY date_submitted DESC LIMIT 1 ",
+                $formid,
+                $this->form_id
+            ),
+        );
+
+
+        if (!$results) {
+            error_log("Database error: ");
+        } else {
+            foreach ($results as $result) {
+                $date = sanitize_text_field($result->date_submitted);
+                $serialized_data = ($result->form_values);
+                $form_id = sanitize_text_field($result->contact_form_id);
+                $id = absint($result->id);
+
+                // Unserialize the serialized form value
+                $unserialized_data = unserialize($serialized_data);
+                error_log('serialized_data: ' . print_r($unserialized_data, true));
+                error_log('in ' . __FILE__ . ' on line ' . __LINE__);
+                $form_values = array(
+                    'contact_form_id' => $form_id,
+                    'id' => $id,
+                    'date' => $date,
+                    'data' => $unserialized_data,
+                );
+            }
+            return $form_values;
+        }
+
+    }
+
+    public function form_details_page()
+    {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'divi_table';
+        //$upload_dir = wp_upload_dir();
+        //$WPFormsDB_dir_url = $upload_dir['baseurl'] . '/WPFormsDB_uploads';
+        $result = $this->retrieve_form_values($this->form_post_id);
+        $results = $result['data'];
+
+        error_log('results: ' . print_r($results, true));
+        error_log('in ' . __FILE__ . ' on line ' . __LINE__);
+
+        if (empty($results)) {
+            wp_die($message = 'Not valid contact form');
+        }
+        ?>
+<div class="wrap">
+    <div id="welcome-panel" class="cfdb7-panel">
+        <div class="cfdb7-panel-content">
+            <div class="welcome-panel-column-container">
+                <h3>
+                    <?php echo ($this->form_post_id); ?>
+                </h3>
+                <p></span>
+                    <?php echo esc_html($result['date']); ?>
+                </p>
+                <?php if (($results)) {
+                            $form_data = ($results);
+                            // Rest of your code
+                        }
+
+
+                        $id = $result['id'];
+
+                        foreach ($form_data as $key => $data):
+
+                            if ($key == ' ')
+                                continue;
+
+                            if (is_array($data)) {
+                                if (array_key_exists('value', $data)) {
+                                    $data = $data['value'];
+                                } else {
+                                    $data = $data;
+                                }
+                            }
+
+
+                            if (strpos($key, 'WPFormsDB_file') !== false) {
+
+                                $key_val = str_replace('WPFormsDB_file', '', $key);
+                                $key_val = ucfirst($key_val);
+                                echo '<p><b>' . esc_html($key_val) . '</b>: <a href="' . esc_url($WPFormsDB_dir_url . '/' . $data) . '">'
+                                    . esc_html($data) . '</a></p>';
+                            } else {
+
+
+                                if (is_array($data)) {
+
+                                    $key_val = str_replace('your-', '', $key);
+                                    $key_val = ucfirst($key_val);
+                                    $arr_str_data = implode(', ', $data);
+                                    $arr_str_data = nl2br($arr_str_data);
+                                    echo '<p><b>' . esc_html($key_val) . '</b>: ' . esc_html($arr_str_data) . '</p>';
+
+                                } else {
+
+                                    $key_val = str_replace('your-', '', $key);
+                                    $key_val = ucfirst($key_val);
+                                    $data = nl2br($data);
+                                    echo '<p><b>' . esc_html($key_val) . '</b>: ' . esc_html($data) . '</p>';
+                                }
+                            }
+
+                        endforeach;
+
+                        $form_data['WPFormsDB_status'] = 'read';
+                        $form_data = serialize($form_data);
+                        $form_id = $result['contact_form_id'];
+
+                        $prepared_query = $wpdb->prepare(
+                            "UPDATE $table_name SET read_status = %s, read_date = NOW() WHERE id = %d",
+                            '1',
+                            $this->form_id
+                        );
+
+                        $result = $wpdb->query($prepared_query);
+
+                        if ($result === false) {
+                            // An error occurred, log the error
+                            $error_message = $wpdb->last_error;
+                            error_log("Database error: $error_message");
+                        } else {
+                            // Query executed successfully, and $result contains the number of affected rows
+                            if ($result > 0) {
+                                // Rows were updated
+                                error_log("Updated $result rows successfully.");
+                            } else {
+                                // No rows were updated
+                                error_log("No rows were updated.");
+                            }
+                        }
+
+                        ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+    }
+
+}

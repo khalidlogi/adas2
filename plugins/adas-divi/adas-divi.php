@@ -47,16 +47,31 @@ function deactivate_adas_divi()
 register_activation_hook(__FILE__, 'activate_adas_divi');
 register_deactivation_hook(__FILE__, 'deactivate_adas_divi');
 
+if (!class_exists('WP_List_Table')) {
+	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
+}
+
+add_action('init', 'db_init');
+
+function db_init()
+{
+	if (is_admin()) {
+		require_once 'adas-divi-wplist.php';
+		require_once 'includes/adas-form-details.php';
+		require_once 'includes/adas-form-details-ufd.php';
+	}
+}
 
 /**
  * Add links in plugin page
  */
 add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'adas_action_links');
 
-function adas_action_links($links) {
-    $settings_link = '<a href="' . esc_url(admin_url('/options-general.php?page=khdiviwplist.php')) . '">Settings</a>';
-    $links[] = $settings_link;
-    return $links;
+function adas_action_links($links)
+{
+	$settings_link = '<a href="' . esc_url(admin_url('/options-general.php?page=khdiviwplist.php')) . '">Settings</a>';
+	$links[] = $settings_link;
+	return $links;
 }
 
 /**

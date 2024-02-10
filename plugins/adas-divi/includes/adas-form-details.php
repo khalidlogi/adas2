@@ -39,7 +39,7 @@ class Adas_form_details
             </h2>
             <form method="post" action="">
 
-                <?php echo 'datails'; ?>
+
                 <?php $ListTable->display(); ?>
             </form>
         </div>
@@ -160,7 +160,7 @@ class ADASDB_Wp_Sub_Page extends WP_List_Table
             'page_name' => _x('page_name', 'Column label', 'wp-list-adas'),
             'page_url' => _x('page_url', 'Column label', 'wp-list-adas'),
             'date_submitted' => _x('date_submitted', 'Column label', 'wp-list-adas'),
-            'contact_form_id' => _x('contact_form_id', 'Column label', 'wp-list-adas'),
+            'read_status' => _x('Read Status', 'Column label', 'wp-list-adas'),
         );
 
         return $columns;
@@ -193,6 +193,7 @@ class ADASDB_Wp_Sub_Page extends WP_List_Table
         $sortable_columns = array(
             'id' => array('id', false),
             'date_submitted' => array('date_submitted', false),
+            'read_status' => array('read_status', false),
         );
 
         return $sortable_columns;
@@ -226,11 +227,19 @@ class ADASDB_Wp_Sub_Page extends WP_List_Table
     protected function column_default($item, $column_name)
     {
         switch ($column_name) {
+
+            case 'read_status':
+                $read_status = $item['read_status'];
+
+                // Output the cell content as "Read" if read_status is 1, or "Unread" otherwise
+                return ($read_status == 1) ? 'Read' : 'Unread';
+
             case 'id':
             case 'page_id':
             case 'page_name':
             case 'page_url':
             case 'date_submitted':
+
             case 'contact_form_id':
                 return $item[$column_name];
             default:
@@ -291,11 +300,13 @@ class ADASDB_Wp_Sub_Page extends WP_List_Table
 
         );
 
+        /*
         $actions['view'] = sprintf(
             '<a href="%1$s">%2$s</a>',
             esc_url(wp_nonce_url(add_query_arg($edit_query_args_v, 'admin.php'), 'editentry_' . $item['id'])),
-            _x('View2', 'List table row action', 'wp-list-adas')
-        );
+            _x('Details', 'List table row action', 'wp-list-adas')
+        );*/
+
 
         //Build delete row action.
         $delete_query_args = array(
@@ -435,7 +446,7 @@ class ADASDB_Wp_Sub_Page extends WP_List_Table
 
         $data = $this->entries_data($current_page, $per_page);
 
-        //usort($data, array($this, 'usort_reorder'));
+        usort($data, array($this, 'usort_reorder'));
 
 
 
@@ -468,6 +479,26 @@ class ADASDB_Wp_Sub_Page extends WP_List_Table
         error_log('total_pages: ' . ceil($total_items / $this->per_page));
     }
 
+    protected function usort_reorder($a, $b)
+    {
+        $orderby = (!empty($_GET['orderby'])) ? $_GET['orderby'] : 'read_status';
+        $order = (!empty($_GET['order'])) ? $_GET['order'] : 'asc';
+
+        switch ($orderby) {
+            case 'read_status':
+                $result = strcmp($a['read_status'], $b['read_status']);
+                break;
+            case 'id':
+                $result = $a['id'] - $b['id'];
+                break;
+            // Add other column cases here if needed
+            default:
+                return 0; // Return 0 for no sorting
+        }
+
+        return ($order === 'asc') ? $result : -$result;
+    }
+
     public function entries_data($page, $items_per_page)
     {
 
@@ -477,7 +508,11 @@ class ADASDB_Wp_Sub_Page extends WP_List_Table
         global $wpdb;
         $results = array();
         $orderby = isset($_GET['orderby']) ? 'date_submitted' : 'date_submitted';
+        error_log('orderby: ' . print_r($orderby, true));
+        error_log('in ' . __FILE__ . ' on line ' . __LINE__);
         $order = isset($_GET['order']) && $_GET['order'] == 'asc' ? 'ASC' : 'DESC';
+        error_log('order: ' . print_r($order, true));
+        error_log('in ' . __FILE__ . ' on line ' . __LINE__);
 
 
         $form_id = $_REQUEST['fid'];

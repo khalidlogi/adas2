@@ -47,6 +47,16 @@ function deactivate_adas_divi()
 register_activation_hook(__FILE__, 'activate_adas_divi');
 register_deactivation_hook(__FILE__, 'deactivate_adas_divi');
 
+add_action('init', 'db_init');
+
+function db_init()
+{
+	if (is_admin()) {
+		require_once 'adas-divi-wplist.php';
+		require_once 'includes/adas-form-details.php';
+		require_once 'includes/adas-form-details-ufd.php';
+	}
+}
 
 /**
  * Add links in plugin page

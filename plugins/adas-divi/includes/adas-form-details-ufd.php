@@ -17,13 +17,17 @@ class ADAS_Form_Details_Ufd
     {
 
         global $wpdb;
-        $this->form_post_id = $_GET['fid'];
+        $this->form_post_id = sanitize_text_field($_GET['fid']);
         $this->form_id = (int) $_GET['ufid'];
+        //table name
         $this->table_name = $wpdb->prefix . 'divi_table';
-
         $this->form_details_page();
+
     }
 
+    /**
+     * Retrieves the submitted form values for the given form ID.
+     */
     public function retrieve_form_values($formid = '')
     {
 
@@ -79,17 +83,17 @@ class ADAS_Form_Details_Ufd
             wp_die($message = 'Not valid contact form');
         }
         ?>
-<div class="wrap">
-    <div id="welcome-panel" class="cfdb7-panel">
-        <div class="cfdb7-panel-content">
-            <div class="welcome-panel-column-container">
-                <h3>
-                    <?php echo ($this->form_post_id); ?>
-                </h3>
-                <p></span>
-                    <?php echo esc_html($result['date']); ?>
-                </p>
-                <?php if (($results)) {
+        <div class="wrap">
+            <div id="welcome-panel" class="cfdb7-panel">
+                <div class="cfdb7-panel-content">
+                    <div class="welcome-panel-column-container">
+                        <h3>
+                            <?php echo ($this->form_post_id); ?>
+                        </h3>
+                        <p></span>
+                            <?php echo esc_html($result['date']); ?>
+                        </p>
+                        <?php if (($results)) {
                             $form_data = ($results);
                             // Rest of your code
                         }
@@ -110,32 +114,18 @@ class ADAS_Form_Details_Ufd
                                 }
                             }
 
-
-                            if (strpos($key, 'WPFormsDB_file') !== false) {
-
-                                $key_val = str_replace('WPFormsDB_file', '', $key);
-                                $key_val = ucfirst($key_val);
-                                echo '<p><b>' . esc_html($key_val) . '</b>: <a href="' . esc_url($WPFormsDB_dir_url . '/' . $data) . '">'
-                                    . esc_html($data) . '</a></p>';
+                            if (is_array($data)) {
+                                $key_val = ucfirst($key);
+                                $arr_str_data = implode(', ', $data);
+                                $arr_str_data = nl2br($arr_str_data);
+                                echo '<p><b>' . esc_html($key_val) . '</b>: ' . esc_html($arr_str_data) . '</p>';
                             } else {
 
-
-                                if (is_array($data)) {
-
-                                    $key_val = str_replace('your-', '', $key);
-                                    $key_val = ucfirst($key_val);
-                                    $arr_str_data = implode(', ', $data);
-                                    $arr_str_data = nl2br($arr_str_data);
-                                    echo '<p><b>' . esc_html($key_val) . '</b>: ' . esc_html($arr_str_data) . '</p>';
-
-                                } else {
-
-                                    $key_val = str_replace('your-', '', $key);
-                                    $key_val = ucfirst($key_val);
-                                    $data = nl2br($data);
-                                    echo '<p><b>' . esc_html($key_val) . '</b>: ' . esc_html($data) . '</p>';
-                                }
+                                $key_val = ucfirst($key);
+                                $data = nl2br($data);
+                                echo '<p><b>' . esc_html($key_val) . '</b>: ' . esc_html($data) . '</p>';
                             }
+
 
                         endforeach;
 
@@ -167,11 +157,11 @@ class ADAS_Form_Details_Ufd
                         }
 
                         ?>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<?php
+        <?php
     }
 
 }

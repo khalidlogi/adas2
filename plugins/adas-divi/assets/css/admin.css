@@ -218,3 +218,13 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+
+/* Styles for wp_list_table */
+.read-status.read {
+  background-color: green;
+  color: white;
+}
+.read-status.unread {
+  background-color: red;
+  color: white;
+}
